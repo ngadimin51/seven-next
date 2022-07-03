@@ -11,4 +11,4 @@
     http://svgicons.sparkk.fr/
 
 I made this just for practice
-thanks forhttps://github.com/KeenthemesHub
+thanks for https://github.com/KeenthemesHub
