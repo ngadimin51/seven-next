@@ -25,3 +25,9 @@ thanks for [Keenthemes](https://github.com/KeenthemesHub)
     },
 
 This project is on progress
+
+## INSTALLATION
+
+    clone or download as zip
+    yarn install
+    yarn dev
