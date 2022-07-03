@@ -17,10 +17,6 @@ export default function Document() {
       <body id="kt_body" className="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-enabled" data-kt-scrolltop="on">
         <Main />
         <NextScript />
-        {/* <Script src="assets/plugins/global/plugins.bundle.js" defer></Script>
-        <Script src="assets/js/scripts.bundle.js" defer></Script>
-        <Script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" defer></Script>
-        <Script src="assets/js/custom/widgets.js" defer></Script> */}
       </body>
     </Html>
   )

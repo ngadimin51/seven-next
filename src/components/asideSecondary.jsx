@@ -27,29 +27,6 @@ export default function AsideSecondary() {
         console.log(search)
     }
 
-    // useEffect(() => {
-
-    //     const menuItem = document.querySelectorAll('.menu-item')
-    //     if ( menuItem ) menuItem.forEach( x => {
-    //         x.addEventListener('click', () => {
-                
-    //             const accordion = x.classList.contains('menu-accordion')
-    //             if ( accordion ) {
-    //                 const subMenu = x.querySelector('.menu-sub-accordion')
-    //                 if ( subMenu.classList.contains('show') ) {
-    //                     subMenu.classList.remove('show')
-    //                     subMenu.parentElement.classList.remove('here')
-    //                 } else {
-    //                     closeMenuAccordion()
-    //                     subMenu.classList.add('show')
-    //                     subMenu.parentElement.classList.add('here')
-    //                 }
-    //             }
-    //         })
-    //     })
-
-    // }, [])
-
     return (
         <div className='aside-secondary d-flex flex-row-fluid'>
             <div className="aside-workspace my-5 p-5" id="kt_aside_wordspace">
