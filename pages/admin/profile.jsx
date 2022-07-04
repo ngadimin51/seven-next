@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Image from 'next/image'
 import Admin from "src/layout/admin"
 
 export default function Profile() {
+
+	const [toggleId, setToggleId] = useState('kt_table_widget_5_tab_1')
+
 	return (
 		<div className="content d-flex flex-column flex-column-fluid" id="kt_content">
 			{/* begin::Container */}
@@ -13,8 +17,9 @@ export default function Profile() {
 						<div className="d-flex flex-wrap flex-sm-nowrap mb-3">
 							{/* begin: Pic */}
 							<div className="me-7 mb-4">
-								<div className="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-									<img src="/assets/media/avatars/150-2.jpg" alt="image" />
+								<div className="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative" style={{borderRadius: '5px', overflow: 'hidden'}}>
+									<Image src="/assets/media/avatars/150-2.jpg" alt="image" height={ 160 } width={ 160 } />
+									{/* <img src="/assets/media/avatars/150-2.jpg" alt="image" /> */}
 									<div className="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px"></div>
 								</div>
 							</div>
@@ -1110,13 +1115,19 @@ export default function Profile() {
 								<div className="card-toolbar">
 									<ul className="nav">
 										<li className="nav-item">
-											<a className="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bolder px-4 me-1" data-bs-toggle="tab" href="#kt_table_widget_5_tab_1">Month</a>
+											<span className={`btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1 ${toggleId == 'kt_table_widget_5_tab_1' ? 'active' : ''}`} data-bs-toggle="tab" onClick={ () => setToggleId('kt_table_widget_5_tab_1')}>
+												Month
+											</span>
 										</li>
 										<li className="nav-item">
-											<a className="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1" data-bs-toggle="tab" href="#kt_table_widget_5_tab_2">Week</a>
+											<span className={`btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1 ${toggleId == 'kt_table_widget_5_tab_2' ? 'active' : ''}`} data-bs-toggle="tab" onClick={ () => setToggleId('kt_table_widget_5_tab_2')}>
+												Week
+											</span>
 										</li>
 										<li className="nav-item">
-											<a className="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4" data-bs-toggle="tab" href="#kt_table_widget_5_tab_3">Day</a>
+											<span className={`btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1 ${toggleId == 'kt_table_widget_5_tab_3' ? 'active' : ''}`} data-bs-toggle="tab" onClick={ () => setToggleId('kt_table_widget_5_tab_3')}>
+												Day
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -1126,7 +1137,7 @@ export default function Profile() {
 							<div className="card-body py-3">
 								<div className="tab-content">
 									{/* begin::Tap pane */}
-									<div className="tab-pane fade show active" id="kt_table_widget_5_tab_1">
+									<div className={`tab-pane fade ${toggleId == 'kt_table_widget_5_tab_1' ? 'show active' : ''}`} id="kt_table_widget_5_tab_1">
 										{/* begin::Table container */}
 										<div className="table-responsive">
 											{/* begin::Table */}
@@ -1297,7 +1308,7 @@ export default function Profile() {
 									</div>
 									{/* end::Tap pane */}
 									{/* begin::Tap pane */}
-									<div className="tab-pane fade" id="kt_table_widget_5_tab_2">
+									<div className={`tab-pane fade ${toggleId == 'kt_table_widget_5_tab_2' ? 'show active' : ''}`} id="kt_table_widget_5_tab_2">
 										{/* begin::Table container */}
 										<div className="table-responsive">
 											{/* begin::Table */}
@@ -1410,7 +1421,7 @@ export default function Profile() {
 									</div>
 									{/* end::Tap pane */}
 									{/* begin::Tap pane */}
-									<div className="tab-pane fade" id="kt_table_widget_5_tab_3">
+									<div className={`tab-pane fade ${toggleId == 'kt_table_widget_5_tab_3' ? 'show active' : ''}`} id="kt_table_widget_5_tab_3">
 										{/* begin::Table container */}
 										<div className="table-responsive">
 											{/* begin::Table */}

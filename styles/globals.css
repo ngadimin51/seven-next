@@ -75,7 +75,7 @@ body {
 
 /* UPDATE BY TOFIK START */
 body::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
 }
 
 body::-webkit-scrollbar:hover {
@@ -88,7 +88,7 @@ body::-webkit-scrollbar-track {
  
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  outline: 1px solid slategrey;
+  /* outline: 1px solid slategrey; */
 }
 /* UPDATE BY TOFIK END */
 
