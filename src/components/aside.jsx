@@ -49,7 +49,7 @@ export default function Aside({children, ...rest}) {
             </div>
 
             <div id="kt_wrapper" className="wrapper d-flex flex-column flex-row-fluid">
-                <Header drawer={ handleDrawer } />
+                <Header drawer={ handleDrawer } path={ router.pathname } />
                 { children }
                 <div className="footer py-4 d-flex flex-lg-column" id="kt_footer">
                     <div className="container-xxl d-flex flex-column flex-md-row flex-stack">

@@ -1,6 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
 
-export default function Header({ drawer }) {
+export default function Header({ drawer, path }) {
+
+    const breadcrumb = path.split('/')
 
     function toggleDrawer() {
         drawer ? drawer(false) : drawer('drawer drawer-start drawer-on')
@@ -17,10 +20,24 @@ export default function Header({ drawer }) {
                     {/* end::Heading */}
                     {/* begin::Breadcrumb*/}
                     <ul className="breadcrumb breadcrumb-line text-muted fw-bold fs-base my-1">
-                        <li className="breadcrumb-item text-muted">
-                            <a href="../dist/index.html" className="text-muted">Home</a>
-                        </li>
-                        <li className="breadcrumb-item text-dark">Dashboard</li>
+                        {
+                            breadcrumb.map( (props, key) => {
+                                if ( key === 0 ) return null
+                                if ( key + 1 === breadcrumb.length ) {
+                                    return (
+                                        <li key={ key } className="breadcrumb-item text-dark">{ props }</li>
+                                    )
+                                } else {
+                                    return (
+                                        <li key={ key } className="breadcrumb-item text-muted">
+                                            <Link href={'/'+props}>
+                                                <a className="text-muted">{ props }</a>
+                                            </Link>
+                                        </li>
+                                    )
+                                }
+                            })
+                        }
                     </ul>
                     {/* end::Breadcrumb*/}
                 </div>
