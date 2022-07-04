@@ -17,6 +17,7 @@ export default function Document() {
       <body id="kt_body" className="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-enabled" data-kt-scrolltop="on">
         <Main />
         <NextScript />
+        <div id="backdrop" />
       </body>
     </Html>
   )

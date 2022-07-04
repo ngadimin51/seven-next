@@ -47,27 +47,27 @@ export default function TablePage() {
   }
 
   function removeBackdrop() {
-    if ( document.querySelector('.modal-backdrop') ) {
-      document.querySelector('.modal-backdrop').remove()
+    const backdrop = document.querySelector('#backdrop')
+    if ( backdrop ) {
+      backdrop.removeAttribute('class')
     }
   }
 
   useEffect(() => {
     const body = document.body
-    const backdrop = document.createElement('div')
-    backdrop.classList.add('modal-backdrop')
-    backdrop.classList.add('fade')
-    backdrop.classList.add('show')
+    const backdrop = document.querySelector('#backdrop')
     if (updateData) {
-        body.classList.add('modal-open')
-        body.setAttribute("style", 'overflow: hidden; padding-right: 0px;')
-        body.appendChild(backdrop)
+      // body.classList.add('modal-open')
+      body.setAttribute("style", 'overflow: hidden; padding-right: 0px;')
+      backdrop.classList.add('modal-backdrop')
+      backdrop.classList.add('fade')
+      backdrop.classList.add('show')
     } else {
         body.classList.remove('modal-open')
         body.removeAttribute('style')
         removeBackdrop()
     }
-    updateData ? body.classList.add('modal-open') : body.classList.remove('modal-open')
+    // updateData ? body.classList.add('modal-open') : body.classList.remove('modal-open')
 }, [updateData])
 
   return (
