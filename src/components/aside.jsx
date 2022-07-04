@@ -55,17 +55,21 @@ export default function Aside({children, ...rest}) {
                     <div className="container-xxl d-flex flex-column flex-md-row flex-stack">
                         <div className="text-dark order-2 order-md-1">
                             <span className="text-gray-400 fw-bold me-1">Created by</span>
-                            <a href="https://keenthemes.com" target="_blank" className="text-muted text-hover-primary fw-bold me-2 fs-6">Keenthemes</a>
+                            <a href="https://keenthemes.com" target="_blank" className="text-muted text-hover-primary fw-bold me-2 fs-6" rel="noopener noreferrer">Keenthemes</a>
+                        </div>
+                        <div className="text-dark order-2 order-md-1">
+                            <span className="text-gray-400 fw-bold">Updated by</span>
+                            <a href="https://ndalu.id" target="_blank" className="text-muted text-hover-primary fw-bold me-2 fs-6" rel="noopener noreferrer">nDalu.id</a>
                         </div>
                         <ul className="menu menu-gray-600 menu-hover-primary fw-bold order-1">
                             <li className="menu-item">
-                                <a href="https://keenthemes.com" target="_blank" className="menu-link px-2">About</a>
+                                <a href="https://keenthemes.com" target="_blank" className="menu-link px-2" rel="noopener noreferrer">About</a>
                             </li>
                             <li className="menu-item">
-                                <a href="https://keenthemes.com/support" target="_blank" className="menu-link px-2">Support</a>
+                                <a href="https://keenthemes.com/support" target="_blank" className="menu-link px-2" rel="noopener noreferrer">Support</a>
                             </li>
                             <li className="menu-item">
-                                <a href="https://keenthemes.com/products/seven-html-pro" target="_blank" className="menu-link px-2">Purchase</a>
+                                <a href="https://keenthemes.com/products/seven-html-pro" target="_blank" className="menu-link px-2" rel="noopener noreferrer">Purchase</a>
                             </li>
                         </ul>
                     </div>

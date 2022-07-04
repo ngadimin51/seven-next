@@ -5,11 +5,12 @@ import TableUser from '@/src/components/element/tableUser'
 import Alert from '@/src/components/alert'
 
 const user = [
-  [{id: 1, name: "Ana Simons", avatar: "/assets/media/avatars/150-11.jpg", skilss: "HTML, JS, ReactJS", company: "intertico", divition: "Web, UI/UX Design", progress: "20"}],
-  [{id: 2, name: "Jessie Clarcson", avatar: "/assets/media/avatars/150-1.jpg", skilss: "C#, ASP.NET, MS SQL", company: "Agoda", divition: "Houses & Hotels", progress: "70"}],
-  [{id: 3, name: "Lebron Wayde", avatar: "/assets/media/avatars/150-13.jpg", skilss: "PHP, Laravel, VueJS", company: "RoadGee", divition: "Transportation", progress: "60"}],
-  [{id: 4, name: "Natali Goodwin", avatar: "/assets/media/avatars/150-14.jpg", skilss: "Python, PostgreSQL, ReactJS", company: "The Hill", divition: "Insurance", progress: "50"}],
-  [{id: 5, name: "Kevin Leonard", avatar: "/assets/media/avatars/150-15.jpg", skilss: "HTML, JS, ReactJS", company: "Agoda", divition: "Art Director", progress: "90"}]
+  [{id: 1, name: "Ngadimin", avatar: "/favicon.png", skilss: "HTML, css, Bootstrap, Mui, JS, ReactJS, NextJS, NodeJS, Express, EJS, PHP, Codeigniter, MYSQL, Autocad, Sketchup, Lumion, Enscape, Photoshop, Corel, Premiere, Words, Spreadsheet, Presentation and anything else 😓", company: "caket.org & ndalu.id", divition: "programer", progress: "10"}],
+  [{id: 2, name: "Ana Simons", avatar: "/assets/media/avatars/150-11.jpg", skilss: "HTML, JS, ReactJS", company: "intertico", divition: "Web, UI/UX Design", progress: "20"}],
+  [{id: 3, name: "Jessie Clarcson", avatar: "/assets/media/avatars/150-1.jpg", skilss: "C#, ASP.NET, MS SQL", company: "Agoda", divition: "Houses & Hotels", progress: "70"}],
+  [{id: 4, name: "Lebron Wayde", avatar: "/assets/media/avatars/150-13.jpg", skilss: "PHP, Laravel, VueJS", company: "RoadGee", divition: "Transportation", progress: "60"}],
+  [{id: 5, name: "Natali Goodwin", avatar: "/assets/media/avatars/150-14.jpg", skilss: "Python, PostgreSQL, ReactJS", company: "The Hill", divition: "Insurance", progress: "50"}],
+  [{id: 6, name: "Kevin Leonard", avatar: "/assets/media/avatars/150-15.jpg", skilss: "HTML, JS, ReactJS", company: "Agoda", divition: "Art Director", progress: "90"}]
 ]
 
 export default function TablePage() {

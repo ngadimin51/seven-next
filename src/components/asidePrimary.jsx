@@ -62,7 +62,9 @@ export default function AsidePrimary() {
             <div className="aside-logo d-none d-lg-flex flex-column align-items-center flex-column-auto py-10" id="kt_aside_logo">
                 <Link href="/admin">
                     <a>
-                        <Image src="/assets/media/logos/favicon.ico" width="48" height="48" alt='logo' />
+                        <div className='next-image-sm'>
+                            <Image src="/favicon.png" width="48" height="48" alt='logo' />
+                        </div>
                     </a>
                 </Link>
             </div>
@@ -659,7 +661,7 @@ export default function AsidePrimary() {
                 {/* begin::User */}
                 <div className="d-flex align-items-center mb-10" id="kt_header_user_menu_toggle">
                     <div onClick={ toggleMenuPopUp } className="cursor-pointer symbol symbol-40px" data-kt-menu-trigger="click" data-kt-menu-overflow="true" data-kt-menu-placement="top-start" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-dismiss="click" title="User profile" style={{width: "48px", height: "48px", borderRadius: '5px', overflow: 'hidden'}}>
-                        <Image src="/assets/media/avatars/150-26.jpg" width="48" height="48" alt='user' />
+                        <Image src="/favicon.png" width="48" height="48" alt='ngadimin 51' />
                     </div>
                     <MenuPopup popup={ popup } callback= { toggleMenuPopUp } />
                 </div>

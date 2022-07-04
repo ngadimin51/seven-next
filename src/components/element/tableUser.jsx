@@ -57,7 +57,7 @@ export default function TableUser({ user, callback }) {
                                             <td>
                                                 <div className="d-flex align-items-center">
                                                     <div className="symbol symbol-45px me-5 next-image-sm">
-                                                        <Image width={ 48 } height={ 48 } src={y.avatar} alt="Ana Simmons" />
+                                                        <Image width={ 48 } height={ 48 } src={y.avatar} alt={y.name} />
                                                     </div>
                                                     <div className="d-flex justify-content-start flex-column">
                                                         <a href="#" className="text-dark fw-bolder text-hover-primary fs-6">{y.name}</a>
