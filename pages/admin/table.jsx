@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Admin from '@/src/layout/admin'
 // components
 import TableUser from '@/src/components/element/tableUser'
+import Alert from '@/src/components/alert'
 
 const user = [
   [{id: 1, name: "Ana Simons", avatar: "/assets/media/avatars/150-11.jpg", skilss: "HTML, JS, ReactJS", company: "intertico", divition: "Web, UI/UX Design", progress: "20"}],
@@ -15,8 +16,10 @@ export default function TablePage() {
 
   const [userData, setUserData] = useState(user)
   const [updateData, setUpdateData] = useState(false)
+  const [alert, setAlert] = useState(false)
 
   function loadUser() {
+    setAlert({color: 'warning', title: 'User loaded', message: 'User reloaded to default'})
     setUserData([...user])
   }
 
@@ -72,6 +75,12 @@ export default function TablePage() {
 
   return (
     <div className="row gy-5 g-xl-12">
+
+      { alert ? (
+        <div className='col-xl-12'>
+          <Alert {...alert} callback={ () => setAlert(false)} />
+        </div>
+      ) : null}
 
       <div className="col-xl-12">
         <div className="card card-xl-stretch mb-5 mb-xl-8">

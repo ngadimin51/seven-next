@@ -33,6 +33,7 @@ This project is on progress
 ## ELEMENT
 
 ### IMAGE
+
     import Image from 'next/image'
 
     <div className="symbol symbol-45px me-5 next-image-sm">
@@ -40,3 +41,16 @@ This project is on progress
     </div>
 
     add class next-image-sm for handle thumbnail image width and height 48px rounded
+
+### ALERT
+
+    import React, { useState } from 'react'
+    import Alert from 'src/components/alert'
+
+    cost [alert, setAlert] = useState({color: 'warning', title: 'This is title', message: 'This is message'})
+
+    {
+        alert ? (
+            <Alert {...alert} callback={ () => setAlert(false)} />
+        ) : null
+    }

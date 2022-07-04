@@ -20,11 +20,11 @@ export default function Alert({color, title, message, callback}) {
     }
 
     return (
-        <div className={`alert alert-dismissible bg-${color} d-flex flex-column flex-sm-row p-5 mb-10`}>
+        <div className={`alert alert-dismissible bg-${color ? color : 'primary'} d-flex flex-column flex-sm-row p-5 mb-10`}>
             <span className="svg-icon svg-icon-2hx svg-icon-light me-4 mb-5 mb-sm-0">{ svg }</span>
             <div className="d-flex flex-column text-light text-start pe-0 pe-sm-10">
-                <h4 className="mb-2 light">{ title }</h4>
-                <span>{ message }</span>
+                <h4 className="mb-2 light">{ title ? title : 'Default Title' }</h4>
+                <span>{ message ? message : 'Default Message' }</span>
             </div>
             <button type="button" className="position-absolute position-sm-relative m-2 m-sm-0 top-0 end-0 btn btn-icon ms-sm-auto" data-bs-dismiss="alert" onClick={ callback }>
                 <span className="svg-icon svg-icon-2x svg-icon-light">
